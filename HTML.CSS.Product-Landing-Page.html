@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 	<title>Product Landing Page: Bean of the Gods</title>
 </head>
 
@@ -9,7 +11,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 body {
-background-color: brown; 
+background-color: #ffa366; 
 font-family: 'Lato', sans-serif;
 
 }
@@ -45,6 +47,10 @@ font-family: 'Lato', sans-serif;
 	justify-content: flex-start;
 }
 
+.logo {
+  margin-right: 10px;
+}
+
 .nav-link {
 	display: inline-block;
 	/*width: 25px;
@@ -55,6 +61,7 @@ font-family: 'Lato', sans-serif;
 	order: 1;
 	padding-left: 100px;
 	padding-right: 100px;
+  padding-bottom: 150px;
 }
 
 #Options {
@@ -67,6 +74,22 @@ font-family: 'Lato', sans-serif;
 	padding-left: 100px;
 }
 
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: blue;
+}
+
 #title {
 	display: flex; 
 	flex-direction: row;
@@ -75,8 +98,6 @@ font-family: 'Lato', sans-serif;
 	font-weight: bold;
 	font-size: 25px;
 	padding: 10px;
-
-	
 }
 
 #subtitle {
@@ -92,7 +113,7 @@ font-family: 'Lato', sans-serif;
 #iframe {
 	display: block;
 	margin: 0 auto;
-	width: 500px;
+	width: 560px;
 }
 
 #form {
@@ -107,74 +128,121 @@ font-family: 'Lato', sans-serif;
 
 }
 
-#submit {
+#video-submit {
+  margin-left: 5px;
+}
 
+.grid {
+  display: flex; 
+}
+
+.desc {
+  margin-left: 40px;
+}
+
+#quality-ingredients {
+  margin-left: 60px;
+}
+
+.item-image {
+  height: 300px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  
+}
+
+.container-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+#item-submit {
+
+}
+
+.item-space {
+  padding-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  line-height: 
+
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #ffcc99;
+}
+
+.bottom-tier {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+.bottom-tier li {
+  padding-right: 20px;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 500px) {
   	body {
-  		background-color: yellow;
+  		background-color: #ff9933;
   	}
   }
 </style>
 <body>
 
 <header id="header">
-	<img id="header-img" src="Bean-of-the-Gods.png"> Bean of the Gods Chocolate
-
+	<img id="header-img" src="Bean-of-the-Gods.png" class="logo">Bean of the Gods Chocolate
 	<nav id="nav-bar">
 		<a id="Features" class="nav-link" href="#link-1" target="_blank">Features
-		<!-- <img src="aztec-gold.jpg"> -->
 		</a>
 		<a id="Options" class="nav-link" href="#link-2" target="_blank">Options
-		<!-- <img src="aztec-gold.jpg"> -->
 		</a>
 		<a id="Pricing" class="nav-link" href="#link-3" target="_blank">Pricing
-		<!-- <img src="aztec-gold.jpg"> -->
 		</a>
 	</nav>
 </header>
-
 <div id="title">Exotic, Hand-crafted, and Spicy Chocolate</div>
-
 <div id="subtitle">Made Fresh From Our Family to Yours</div>
-
-<div>
-<p id="link-1">Features</p>
-
-<p id="link-2">Options</p>
-
-<p id="link-3">Pricing</p>
-</div>
 
 <div id="iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ibjUpk9Iagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<br>
+
 <form id="form" action="https://www.freecodecamp.com/email-submit" method="get">
-  <input id="email" type="email" placeholder="Enter your email" required><br>
-  <input type="submit" id="submit"> 
+  <input id="email" type="email" placeholder="Enter your email" required>
+  <button type="submit" id="video-submit" class="btn btn-primary">Submit</button>
 </form>
 <br>
 <br>
-<br>
-<br>
-<p id="link-1">Features</p>
-
-<p id="link-2">Options</p>
-
-<p id="link-3">Pricing</p>
-
-
 <div class="container">
   <section id="features">
     <div class="grid">
       <div class="icon">
         <i class="fa fa-3x fa-fire"></i>
       </div>
-      <div class="desc">
-        <h2>Premium Materials</h2>
-        <p>Our chocolates are sourced directly from West Africa, certified as "Fair Trade", and manufactured in our facilities in an old Mexican fashion. This way, the chocolate helps the community that needs it the most without placing any furhter burdens on the planet.</p>
+      <div class="desc" id="quality-ingredients">
+        <h2>Quality Ingredients</h2>
+        <p>Our chocolates are sourced directly from southern Mexico, certified as "Fair Trade", and manufactured in our facilities in an old Mexican fashion. This way, the chocolate helps the community that needs it the most without placing any further burden on the planet.</p>
       </div>
     </div>
     <div class="grid">
@@ -196,56 +264,101 @@ font-family: 'Lato', sans-serif;
       </div>
     </div>
   </section>
-  <section id="pricing">
-    <div id="tenor">
-      <div class="level">
-        Chocoalte Aztec Calendar Disc
+
+<div class="container-items">
+    <div>
+      <div>
+        <img class="item-image" src="chocolate-in-a-metal-bowl.jpg">
+        <h4>Dark Chocoalte Aztec Bars</h4>
       </div>
-      <h2>$50</h2>
+      <h2>$8 each</h2>
       <ol>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum dolor.</li>
         <li>Lorem ipsum.</li>
       </ol>
-      <button class="btn">Select</button>
+      <button type="button" id="item-submit" class="btn btn-primary">Select</button>
     </div>
-    <div id="bass">
-      <div class="level">
-        Milk Chocolate Jaguar Bar 
+    <div>
+      <div>
+        <img class="item-image" src="milk-chocolate.jpg">
+        <h4>Milk Chocolate Mayan Bars</h4>
       </div>
-      <h2>$10</h2>
+      <h2>$10 each</h2>
       <ol>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum dolor.</li>
         <li>Lorem ipsum.</li>
       </ol>
-      <button class="btn">Select</button>
+      <button type="button" class="btn btn-primary">Select</button>
     </div>
-    <div id="valve">
-      <div class="level">
-        Chili-Flavored Chocolate Fountain
+    <div>
+      <div>
+        <img class="item-image" src="chocolate-fountain.jpg">
+        <h4>Chili-Flavored Chocolate Fountain</h4>
       </div>
-      <h2>$100</h2>
+      <h2>$120 each</h2>
       <ol>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum.</li>
         <li>Lorem ipsum dolor.</li>
         <li>Lorem ipsum.</li>
       </ol>
-      <button class="btn">Select</button>
+      <button type="button" class="btn btn-primary">Select</button>
     </div>
-  </section>
+    <div>
+      <div class="item-space">
+        <img class="item-image" src="brownie-with-chocolate-filling.jpg">
+        <h4>Lava Fudge Brownies</h4>
+      </div>
+      <h2>$15 per box</h2>
+      <ol>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ol>
+      <button type="button" class="btn btn-primary">Select</button>
+    </div>
+    <div>
+      <div class="item-space">
+        <img class="item-image" src="chocolate-coffee.jpg">
+        <h4>Chichen Itza Coffee</h4>
+      </div>
+      <h2>$10 per mix</h2>
+      <ol>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ol>
+      <button type="button" class="btn btn-primary">Select</button>
+    </div>
+    <div>
+      <div class="item-space">
+        <img class="item-image" src="creamy-mexican-mushroom-drink.jpg">
+        <h4>Mexican Mushroom Smoothie</h4>
+      </div>
+      <h2>$15 per mix</h2>
+      <ol>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum.</li>
+      </ol>
+      <button type="button" class="btn btn-primary">Select</button>
+    </div>
+</div>
   <footer>
-    <ul>
+    <ul class="bottom-tier">
       <li><a href="#">Privacy</a></li>
       <li><a href="#">Terms</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-    <span>Copyright 2019, Bean of the Gods Chocolate</span>
+    <span class="copyright">Copyright 2019, Bean of the Gods Chocolate</span>
   </footer>
-</div>
 </div>
 
 </body>
