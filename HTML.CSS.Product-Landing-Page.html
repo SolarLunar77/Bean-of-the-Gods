@@ -20,8 +20,8 @@ font-family: 'Lato', sans-serif;
 #header {
 	display: flex;
 	flex-direction: row;
-	padding-top: 10px;
-	/*justify-content: center;*/
+/*	padding-top: 10px;
+*/	/*justify-content: center;*/
 	/*flex: 1;*/
 	font-family: 'Arial', sans-serif;
 	font-weight: bold; 
@@ -49,6 +49,7 @@ font-family: 'Lato', sans-serif;
 
 .logo {
   margin-right: 10px;
+  pa
 }
 
 .nav-link {
@@ -57,19 +58,19 @@ font-family: 'Lato', sans-serif;
 	overflow: hidden;*/
 }
 
-#Fearures {
+#Ingredients {
 	order: 1;
 	padding-left: 100px;
-	padding-right: 100px;
-  padding-bottom: 150px;
-}
+	/*padding-right: 100px;*/
+/*  padding-bottom: 150px;
+*/}
 
-#Options {
+#Shipping {
 	order: 2;
 	padding-left: 100px;
 }
 
-#Pricing {
+#Charity {
 	order: 3;
 	padding-left: 100px;
 }
@@ -110,7 +111,7 @@ a:active {
 	padding-bottom: 30px;
 }
 
-#iframe {
+.iframe {
 	display: block;
 	margin: 0 auto;
 	width: 560px;
@@ -160,6 +161,7 @@ a:active {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 5px;
+  width: 100%;
 }
 
 #item-submit {
@@ -207,24 +209,47 @@ footer {
   		background-color: #ff9933;
   	}
   }
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+.responsive {
+   float: left;
+   width: 100%;
+}
+
+@media (min-width:500px){
+   .responsive {
+       width: 50%;
+  }
+}
+/*@media only screen and (max-width: 500px){
+  .iframe {
+    width: 75%;
+  }
+}*/
 </style>
 <body>
 
 <header id="header">
-	<img id="header-img" src="Bean-of-the-Gods.png" class="logo">Bean of the Gods Chocolate
+	<img id="header-img" src="Bean-of-the-Gods.png" class="logo">
 	<nav id="nav-bar">
-		<a id="Features" class="nav-link" href="#link-1" target="_blank">Features
+		<a id="Ingredients" class="nav-link" href="#link-1" target="_blank">Ingredients
 		</a>
-		<a id="Options" class="nav-link" href="#link-2" target="_blank">Options
+		<a id="Shipping" class="nav-link" href="#link-2" target="_blank">Shipping
 		</a>
-		<a id="Pricing" class="nav-link" href="#link-3" target="_blank">Pricing
+		<a id="Charity" class="nav-link" href="#link-3" target="_blank">Charity
 		</a>
 	</nav>
 </header>
 <div id="title">Exotic, Hand-crafted, and Spicy Chocolate</div>
 <div id="subtitle">Made Fresh From Our Family to Yours</div>
 
-<div id="iframe">
+<div class="iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ibjUpk9Iagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
@@ -266,7 +291,7 @@ footer {
   </section>
 
 <div class="container-items">
-    <div>
+    <div class="responsive">
       <div>
         <img class="item-image" src="chocolate-in-a-metal-bowl.jpg">
         <h4>Dark Chocoalte Aztec Bars</h4>
@@ -280,7 +305,7 @@ footer {
       </ol>
       <button type="button" id="item-submit" class="btn btn-primary">Select</button>
     </div>
-    <div>
+    <div class="responsive">
       <div>
         <img class="item-image" src="milk-chocolate.jpg">
         <h4>Milk Chocolate Mayan Bars</h4>
@@ -294,7 +319,7 @@ footer {
       </ol>
       <button type="button" class="btn btn-primary">Select</button>
     </div>
-    <div>
+    <div class="responsive">
       <div>
         <img class="item-image" src="chocolate-fountain.jpg">
         <h4>Chili-Flavored Chocolate Fountain</h4>
@@ -308,7 +333,7 @@ footer {
       </ol>
       <button type="button" class="btn btn-primary">Select</button>
     </div>
-    <div>
+    <div class="responsive">
       <div class="item-space">
         <img class="item-image" src="brownie-with-chocolate-filling.jpg">
         <h4>Lava Fudge Brownies</h4>
@@ -322,7 +347,7 @@ footer {
       </ol>
       <button type="button" class="btn btn-primary">Select</button>
     </div>
-    <div>
+    <div class="responsive">
       <div class="item-space">
         <img class="item-image" src="chocolate-coffee.jpg">
         <h4>Chichen Itza Coffee</h4>
@@ -336,7 +361,7 @@ footer {
       </ol>
       <button type="button" class="btn btn-primary">Select</button>
     </div>
-    <div>
+    <div class="responsive">
       <div class="item-space">
         <img class="item-image" src="creamy-mexican-mushroom-drink.jpg">
         <h4>Mexican Mushroom Smoothie</h4>
