@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+
 	<title>Product Landing Page: Bean of the Gods</title>
 </head>
 
@@ -146,8 +148,8 @@ a:active {
 }
 
 .item-image {
-  height: 300px;
-  width: 250px;
+  height: 20rem;
+  width: 15rem;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 5px;
@@ -207,22 +209,24 @@ footer {
 @media (max-width: 500px) {
   	body {
   		background-color: #ff9933;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   	}
   }
 
-@media only screen and (max-width: 700px) {
+/*@media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 6px 0;
   }
-}
+}*/
 
 .responsive {
    float: left;
    width: 100%;
 }
 
-@media (min-width:500px){
+@media screen and (max-width:500px){
    .responsive {
        width: 50%;
   }
@@ -232,10 +236,70 @@ footer {
     width: 75%;
   }
 }*/
+
+.nav-color {
+  background-color: #ffcc99;
+}
+
+.centered {
+  margin: auto;
+  width: 85%;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
 <body>
 
-<header id="header">
+<nav class="navbar navbar-expand-lg navbar-light nav-color">
+   <a class="navbar-brand" href="#">
+    <img src="Bean-of-the-Gods.png" width="60" height="60" alt="">
+  </a>
+  <a class="navbar-brand" href="#">Bean of the Gods Chocolate</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Ingredients <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Delivery <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Charity <span class="sr-only">(current)</span></a>
+      </li>
+     <!--  <li class="nav-item">
+        <a class="nav-link" href="#">Charity</a>
+      </li> -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li> -->
+    <!--   <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li> -->
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- <header id="header">
 	<img id="header-img" src="Bean-of-the-Gods.png" class="logo">
 	<nav id="nav-bar">
 		<a id="Ingredients" class="nav-link" href="#link-1" target="_blank">Ingredients
@@ -245,7 +309,8 @@ footer {
 		<a id="Charity" class="nav-link" href="#link-3" target="_blank">Charity
 		</a>
 	</nav>
-</header>
+</header> -->
+
 <div id="title">Exotic, Hand-crafted, and Spicy Chocolate</div>
 <div id="subtitle">Made Fresh From Our Family to Yours</div>
 
@@ -259,8 +324,8 @@ footer {
 </form>
 <br>
 <br>
-<div class="container">
-  <section id="features">
+<div class="centered">
+  <section>
     <div class="grid">
       <div class="icon">
         <i class="fa fa-3x fa-cookie"></i>
@@ -288,9 +353,10 @@ footer {
         <p>For every purchase you make, we will donate a portion of the proceeds to help preserve the rain forests of Central America.</p>
       </div>
     </div>
+  </div>
   </section>
 
-<div class="container-items">
+<div class="container-items centered">
     <div class="responsive">
       <div>
         <img class="item-image" src="chocolate-in-a-metal-bowl.jpg">
@@ -375,7 +441,12 @@ footer {
       </ol>
       <button type="button" class="btn btn-outline-light">Select</button>
     </div>
+  <div class="clearfix"></div>
 </div>
+
+
+
+
   <footer>
     <ul class="bottom-tier">
       <li><a href="#">Privacy</a></li>
@@ -385,6 +456,10 @@ footer {
     <span class="copyright">Copyright 2019, Bean of the Gods Chocolate</span>
   </footer>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
